@@ -27,7 +27,8 @@ namespace pingTool
             
                 //本文と、本文の文字コードを設定する
                 msg.Body = bodyText;
-
+                
+                //文字コード
                 msg.BodyEncoding = enc;
                 //「content-transfer-encoding」を「7bit」にする
                 msg.BodyTransferEncoding = System.Net.Mime.TransferEncoding.SevenBit;
