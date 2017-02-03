@@ -9,7 +9,6 @@ namespace pingTool
 {
     class Class_sendTrap
     {
-
         //トラップ送信先
         public string trapServer { get; set; }
         //コミュニティ名
