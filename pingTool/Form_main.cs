@@ -345,8 +345,10 @@ namespace pingTool
                         //エラー回数が設定数を超えたらメッセージを出す
                         if (res_cls.count > 0)
                         {
-                            int ccount = (int)res_cls.count % iniData.MessageCount;
-                            if (ccount == 0)
+
+                            //int ccount = (int)res_cls.count % iniData.MessageCount;
+
+                            if (iniData.MessageCount == res_cls.count)
                             {
 
                                 Class_sendTrap sendTrap = new Class_sendTrap();
