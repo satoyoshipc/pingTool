@@ -19,8 +19,14 @@ namespace pingTool
             //Pingオブジェクトの作成
             System.Net.NetworkInformation.Ping p =
                 new System.Net.NetworkInformation.Ping();
-            //IPaddressにPingを送信する
-            System.Net.NetworkInformation.PingReply reply = p.Send(res_cls.address);
+            //IPaddressにPingを送信する 5秒固定
+            //デフォルトのバッファ・サイズは32bytes
+            System.Net.NetworkInformation.PingReply reply = p.Send(res_cls.address,5000);
+
+            //失敗時リトライ
+            if(reply.Status != System.Net.NetworkInformation.IPStatus.Success) 
+                reply = p.Send(res_cls.address, 5000);
+
 
             //結果を取得
             //成功時
@@ -67,6 +73,7 @@ namespace pingTool
             }
             else
             {
+
                 // 失敗時
                 logger.Warn(res_cls.address + ": Ping応答なし。" + reply.Status);
 

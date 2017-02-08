@@ -345,8 +345,10 @@ namespace pingTool
                         //エラー回数が設定数を超えたらメッセージを出す
                         if (res_cls.count > 0)
                         {
-                            int ccount = (int)res_cls.count % iniData.MessageCount;
-                            if (ccount == 0)
+
+                            //int ccount = (int)res_cls.count % iniData.MessageCount;
+
+                            if (iniData.MessageCount == res_cls.count)
                             {
 
                                 Class_sendTrap sendTrap = new Class_sendTrap();
@@ -545,6 +547,7 @@ namespace pingTool
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
 
+            
         }
         //詳細画面を表示する
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -612,6 +615,13 @@ namespace pingTool
 
             Clipboard.SetText(yuncstr);
 
+        }
+
+        //終了時確認ダイアログを表示する
+        private void Form_main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("pingToolを終了しますか？", "pingTool", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
+                e.Cancel = true; 
         }
     }
 }
