@@ -24,8 +24,8 @@ namespace pingTool
             System.Net.NetworkInformation.PingReply reply = p.Send(res_cls.address,5000);
 
             //失敗時リトライ
-            if(reply.Status != System.Net.NetworkInformation.IPStatus.Success) 
-                reply = p.Send(res_cls.address, 5000);
+            //if(reply.Status != System.Net.NetworkInformation.IPStatus.Success) 
+            //    reply = p.Send(res_cls.address, 5000);
 
 
             //結果を取得
