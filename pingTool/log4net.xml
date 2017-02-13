@@ -17,6 +17,7 @@
       <param name="RollingStyle" value="size" />
       <param name="MaximumFileSize" value="20MB" />
       <param name="StaticLogFileName" value="false" />
+      <param name="MaxSizeRollBackups" value="10" />
       <AppendToFile value="true" />
 
       <filter type="log4net.Filter.LevelRangeFilter">

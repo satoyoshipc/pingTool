@@ -52,6 +52,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.m_recieveServer = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.m_comboMinute = new System.Windows.Forms.ComboBox();
+            this.m_comboHour = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
             this.m_password = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,10 +72,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.m_smtpServer = new System.Windows.Forms.TextBox();
             this.m_hanei_label = new System.Windows.Forms.Label();
-            this.m_comboHour = new System.Windows.Forms.ComboBox();
-            this.m_comboMinute = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m_recoverCount)).BeginInit();
@@ -128,7 +128,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(459, 255);
+            this.tabPage1.Size = new System.Drawing.Size(459, 296);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "PING設定";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -268,9 +268,9 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(204, 94);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 12);
+            this.label8.Size = new System.Drawing.Size(82, 12);
             this.label8.TabIndex = 10;
-            this.label8.Text = "ObjectID";
+            this.label8.Text = "Enterprise-OID";
             // 
             // m_objectID
             // 
@@ -377,6 +377,70 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "定期メール";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(56, 61);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(11, 12);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "：";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(10, 42);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 12);
+            this.label16.TabIndex = 27;
+            this.label16.Text = "送信時間";
+            // 
+            // m_comboMinute
+            // 
+            this.m_comboMinute.FormattingEnabled = true;
+            this.m_comboMinute.Items.AddRange(new object[] {
+            "00",
+            "30"});
+            this.m_comboMinute.Location = new System.Drawing.Point(72, 58);
+            this.m_comboMinute.Name = "m_comboMinute";
+            this.m_comboMinute.Size = new System.Drawing.Size(42, 20);
+            this.m_comboMinute.TabIndex = 26;
+            this.m_comboMinute.Text = "00";
+            // 
+            // m_comboHour
+            // 
+            this.m_comboHour.FormattingEnabled = true;
+            this.m_comboHour.Items.AddRange(new object[] {
+            "00",
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
+            this.m_comboHour.Location = new System.Drawing.Point(7, 58);
+            this.m_comboHour.Name = "m_comboHour";
+            this.m_comboHour.Size = new System.Drawing.Size(42, 20);
+            this.m_comboHour.TabIndex = 25;
+            this.m_comboHour.Text = "00";
             // 
             // label15
             // 
@@ -527,70 +591,6 @@
             this.m_hanei_label.Size = new System.Drawing.Size(137, 12);
             this.m_hanei_label.TabIndex = 23;
             this.m_hanei_label.Text = "反映するには再実行が必要";
-            // 
-            // m_comboHour
-            // 
-            this.m_comboHour.FormattingEnabled = true;
-            this.m_comboHour.Items.AddRange(new object[] {
-            "00",
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"});
-            this.m_comboHour.Location = new System.Drawing.Point(7, 58);
-            this.m_comboHour.Name = "m_comboHour";
-            this.m_comboHour.Size = new System.Drawing.Size(42, 20);
-            this.m_comboHour.TabIndex = 25;
-            this.m_comboHour.Text = "00";
-            // 
-            // m_comboMinute
-            // 
-            this.m_comboMinute.FormattingEnabled = true;
-            this.m_comboMinute.Items.AddRange(new object[] {
-            "00",
-            "30"});
-            this.m_comboMinute.Location = new System.Drawing.Point(72, 58);
-            this.m_comboMinute.Name = "m_comboMinute";
-            this.m_comboMinute.Size = new System.Drawing.Size(42, 20);
-            this.m_comboMinute.TabIndex = 26;
-            this.m_comboMinute.Text = "00";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(10, 42);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 12);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "送信時間";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(56, 61);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(11, 12);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "：";
             // 
             // Form_Configure
             // 
